@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #ffdee6;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 110px;
+    background-color:#f44a73;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.logo{
+    display:flex;
+    margin-left:5px;
+}
+.logo img{
+    height:100px;
+    width:100px;
+    border-radius: 10px;
+    border:1px solid black;
+}
+.tituloHeader{
+    width:100px;
+    margin:auto;
+    padding:10px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.1em;
+}
+nav a{
+    margin:5px;
+    padding: 5px;
+    border-radius: 5px;
+    border:1px solid white;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition:all 0.5s ease-in-out;
+}
+nav a:hover{
+    color:white;
+    background: #ffcdea;
+}
+
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 65vh;
+    color: rgb(0, 0, 0);
+    background-image: url(https://www.cnet.com/a/img/resize/12b8c0e4e1000d971ee523eef1a0fc34cb30be94/hub/2023/07/05/023751fb-769d-4269-bc83-f13adff80033/5g6a9265-edit-copy.jpg?auto=webp&fit=crop&height=675&width=1200);
+}
+
+#Confiable{
+    background-color: #f44a73;
+}
+
+#Confiable .container{
+    text-align: center;
+    padding: 30px 12px;
+    color:white;
+
+}
+.titulo h2{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    
+}
+.titulo p{
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+#celulares{
+    background-color: #ffdee6  ;
+    text-align: center;
+}
+main{
+    padding:20px;
+}
+.tipos,
+.tipos1{
+   display:flex;
+   flex-wrap: wrap;
+   gap:10px;
+}
+.tipos img{
+    height:200px;
+    width:150px;
+    margin: auto;
+    padding: 8px;
+}
+.tipos h5,
+.tipos p{
+    text-align: center;
+}
+h1{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.445);
+}
+
+
+h3{ font-size: 1.3em; color: darkred; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
+h4{ font-size: 1.2em; text-align: center;}
+
+
+.color-acordeon{
+    background-color: #ffdee6;
+    margin:25px;
+}
+.color-acordeon h2,
+.color-acordeon button{
+    background-color: #ffcdea;
+}
+
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #f44a73;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer p{
+    background: #f44a73;
+    text-align: center;
+    justify-content: center;
+    color:white;
+}
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem{
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+
+.menu-icon{
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon:hover{
+    opacity: 1;
+}
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 8px 29px;
+    border-radius: 10px;
+    border: 1.5x solid rgb(44, 44, 44);
+    box-shadow: 1px 2px 10px rgb(154, 155, 158);
+    background-color: rgb(211, 216, 223);
+    margin-inline-start: 13px;
+    }
+.modos,
+.modos2{
+    font-size: 0.8em;
+    border: 2px solid white;
+    box-shadow: 0;
+    background-color: #ffcdea;
+}  
+.modos a,
+.modos2 a{
+    text-decoration: none;
+    color:#f44a73;
+}
+
+#caracteristicas{
+    background-color: rgb(207, 200, 104);
+
+}
+#caracteristicas .container{
+    height: 100px;
+    max-width: 900px;
+    padding-top: 10px;
+}
+#registro {
+    background-color: rgb(106, 247, 101);
+    max-width: 205px;
+    margin-inline-start: 600px;
+}
+/*EL SIGUIENTE CSS ES PARA LA PAGINA2 
+¡PORFAVOR NO LO VAYAS A BORRAR , TODO ES PARA SEGUIR UN ORDEN! */
+.title{
+    box-sizing: border-box;
+    
+    margin-inline-start: 400px;
+    margin-inline-end: 400px;
+}
+.somos{
+    border: 4px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgb(243, 160, 188);
+    margin-inline-end: 280px;
+    padding: 10px 10px 10px 10px;
+}
+.cajaTexto{
+    display:flex;
+}
+
+.img{
+    max-height: 200px;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-inline-start: 100px;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+.title2{
+    box-sizing: border-box;
+    background-color: rgb(159, 224, 250);
+    margin-inline-start: 400px;
+    margin-inline-end: 400px;
+    padding: 15px 15px 15px 15px;
+}
+.conte2{
+    box-sizing: border-box;
+    background-color: aliceblue;
+    margin-left: 100px;
+    padding: 20px 20px 20px 20px;
+    
+}
+.chicos{
+    max-height: 200px;
+    margin-top: 50px;
+    margin-left: 485px;
+}
+
+.carrusel{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+/*PORFAVOR NO BORREN ESTO !
+ESTA SERA LA SECCION CSS DE LA PAGINA 3 */
+.movTitulo h1{
+    animation: move-left-right 7s infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    }
+    @keyframes move-left-right{
+        from{
+          transform: translateX(-500px)
+        }
+        to{
+            transform: translateX(500px);
+        }
+    }
+    
+.titulo4{
+        box-sizing: border-box;
+        margin-top: 20px;
+        background-color: rgb(132, 224, 204);
+        margin-inline-start: 400px;
+        margin-inline-end: 400px;
+    }
+.text{
+        box-sizing: border-box;
+        background-color: rgb(240, 233, 172);
+        margin-left: 210px;
+        margin-inline-end: 260px;
+        padding: 10px 10px 10px 10px;
+        margin-top: 20px;
+    }
+.contenedor{
+        display: flex;
+        justify-content: center;
+    }
+.image-1{
+        width: 230px;
+        height: 210px;
+        margin-right: 40px;
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+.logitos img{
+    align-items: center;
+    justify-content: center;
+    margin-left:300px;
+    }
+.image-3{
+        width: 230px;
+        height: 210px;
+        margin-top: 20px;
+        border:2px solid white;
+        border-radius: 10px;
+
+    }
+
+.titulo5{
+        box-sizing: border-box;
+        background-color: rgb(120, 202, 182);
+        margin-inline-start: 400px;
+        margin-inline-end: 400px;
+        margin-top: 35px;
+    }
+.movTitulo h2{
+        animation: move-left-right 7s 1;
+        animation-direction: normal;
+        }
+        @keyframes move-left-right{
+            from{
+              transform: translateX(-500px)
+            }
+            to{
+                transform: translateX(400px);
+            }
+        }
+.container2{
+        margin-inline-start: 50px;
+        margin-inline-end: 50px;
+        margin-top: 40px;
+    }
+    
+.carrusel{
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+.elemento{
+        flex: 1 0 auto;
+        margin: 0 30px;
+        padding: 30px 30px 30px 50px;
+        background-color: rgb(181, 236, 149);
+        width: 300px;
+        height: 250px;
+    }
+.elemento img{
+        width: 200px;
+        height: 100%;
+       border: 2px solid #f44a73;
+        border-radius: 10px;
+    
+    }
+.container2 td {
+        border: 1px solid black;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+.container2 th{
+        border: 1px solid black;
+    }
+.accordion-body{
+    padding-top: 24px;
+}
+.espacio{
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
+}
+.espa{
+    padding-top: 13px;
+}
+.espa1{
+    padding-top: 15px;
+}
+

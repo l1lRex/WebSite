@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .bg-pink {
+            background-color: #f44a73 !important;
+            color: white;
+        }
+        
+        .bg-pink a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .bg-pink a:hover {
+            color: #FFB6C1;
+        }
+        </style>
+</head>
+<body>
+    <header class="bg-f44a73 text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <h2>PHONE COMPANY</h2>
+            </div>
+            <nav>
+                <ul class="list-unstyled d-flex mb-0">
+                    <li class="mx-3"><a href="PaginaPrincipal.html" class="text-white">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main class="container mt-4">
+        <h1 class="text-center">Carrito de Compras</h1>
+
+        <div id="carrito-contenido" class="row">
+        </div>
+
+        <div id="total-carrito" class="text-center mt-4">
+            <h4>Total: S/. 0</h4>
+            <button class="btn btn-primary" id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </main>
+    <footer class="bg-pink text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="info">
+                <p>&copy; 2024 BY: PHONE COMPANY. Todos los derechos reservados.</p>
+            </div>
+            <div class="social-media">
+                <ul class="list-unstyled d-flex mb-0">
+                    <li class="mx-3"><a href="https://www.facebook.com/" target="_blank" class="text-white">Facebook</a></li>
+                    <li class="mx-3"><a href="https://www.twitter.com/" target="_blank" class="text-white">Twitter</a></li>
+                    <li class="mx-3"><a href="https://www.instagram.com/" target="_blank" class="text-white">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+            if (carrito.length === 0) {
+                $('#carrito-contenido').html('<p class="text-center">Tu carrito está vacío.</p>');
+                $('#total-carrito').hide();
+            } else {
+                var total = 0;
+                carrito.forEach(function(producto, index) {
+                    $('#carrito-contenido').append(`
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${producto.nombre}</h5>
+                                    <p class="card-text">S/. ${producto.precio}</p>
+                                    <button class="btn btn-danger eliminar-carrito" data-index="${index}">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                    total += producto.precio;
+                });
+
+                $('#total-carrito h4').text('Total: S/. ' + total);
+
+                $('.eliminar-carrito').click(function() {
+                    var index = $(this).data('index');
+                    carrito.splice(index, 1);
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
+                    location.reload(); 
+                });
+            }
+
+            $('#finalizar-compra').click(function() {
+                alert('Compra finalizada. ¡Gracias por tu compra!');
+                localStorage.removeItem('carrito'); 
+                location.reload(); 
+            });
+        });
+    </script>
+</body>
+</html>

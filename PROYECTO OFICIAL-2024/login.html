@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Tienda de CELULARES</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Inicio de Sesión</h2>
+        <form id="loginForm" onsubmit="return validateForm()">
+            <div class="input-group">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <button type="submit">Iniciar Sesión</button>
+            </div>
+        </form>
+        
+        <p class="or">O inicia sesión con</p>
+        <div class="social-login">
+            <a href="https://www.facebook.com" target="_blank">
+                <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+            </a>
+            <a href="https://accounts.google.com/signin" target="_blank">
+                <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <button class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</button>
+            </a>
+            
+        </div>
+        
+        <p class="register-link">¿No tienes una cuenta? <a href="Pagina4.html">Regístrate aquí</a></p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
